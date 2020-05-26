@@ -1,14 +1,13 @@
 
-
-```
 # Init a project
+```
 mkdir src dist config
 git init .
 npm init -y
 sudo npm install -g webpack webpack-cli
 touch src/index.js dist/index.html
 
-# test
+# test if everything is ok
 webpack --mode=development
 webpack --mode=production
 
@@ -20,4 +19,14 @@ touch src/main.js
 # run with config file:
 webpack --config=config/webpack.dev.js
 
+```
+
+Using a webpack-dev-server to run the app from a browser:
+```
+npm install -s webpack webpack-cli webpack-dev-server
+
+# add to package.json the command:
+"dev-server": "webpack-dev-server --config=config/webpack.dev.js",
+# then run:
+npm run dev-server
 ```
