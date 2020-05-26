@@ -15,9 +15,12 @@ module.exports = {
     publicPath: '/'
   },
   devServer: {
-    contentBase: path.resolve(__dirname, '../dist')
+    contentBase: path.resolve(__dirname, '../dist'),
+    // display errors on the browser as well
+    overlay: true
   },
   module: {
+    // modules need to be installed (it'll applied one by one bottom-up)
     rules: [
       // this needs: npm install style-loader css-loader
      {
@@ -27,6 +30,20 @@ module.exports = {
           { loader: "style-loader" },
           { loader: "css-loader" }
 
+        ]
+     },
+     // this needs: npm install html-loader extract-loader file-loader
+     {
+       test: /\.html$/,
+       use: [
+         { loader: "file-loader",
+            options: {
+              name: "[name].html"
+            }
+          },
+          // this tells webpack to output resource in a separate file
+          { loader: "extract-loader" },
+          { loader: "html-loader" },
         ]
      }
     ]

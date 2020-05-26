@@ -35,4 +35,7 @@ npm run dev-server
 # CSS Loader: create a css file
 touch src/main.css
 npm install style-loader css-loader
+
+# Html loader
+npm install html-loader extract-loader file-loader
 ```
