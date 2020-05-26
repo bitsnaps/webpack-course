@@ -16,6 +16,20 @@ module.exports = {
   },
   devServer: {
     contentBase: path.resolve(__dirname, '../dist')
+  },
+  module: {
+    rules: [
+      // this needs: npm install style-loader css-loader
+     {
+       test: /\.css$/,
+       use: [
+         // this will inject style into the html
+          { loader: "style-loader" },
+          { loader: "css-loader" }
+
+        ]
+     }
+    ]
   }
 
 }

@@ -30,3 +30,9 @@ npm install -s webpack webpack-cli webpack-dev-server
 # then run:
 npm run dev-server
 ```
+# Introducing loaders
+```
+# CSS Loader: create a css file
+touch src/main.css
+npm install style-loader css-loader
+```
