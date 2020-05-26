@@ -1,5 +1,8 @@
+# Webpack Course
 
-# Init a project
+Course from Udemy: https://www.udemy.com/course/webpack-beyond-the-basics
+
+## Init a project
 ```
 mkdir src dist config
 git init .
@@ -30,7 +33,7 @@ npm install -s webpack webpack-cli webpack-dev-server
 # then run:
 npm run dev-server
 ```
-# Introducing loaders
+## Introducing loaders
 ```
 # CSS Loader: create a css file
 touch src/main.css
@@ -40,5 +43,29 @@ npm install style-loader css-loader
 npm install html-loader extract-loader file-loader
 
 # Image loader
+
+```
+
+## Including babel:
+```
+npm install babel-core
+
+# create babel config file
+touch .babelrc
+
+# install some babel's plugins & babel's cli
+npm install babel-plugin-transform-es2015-arrow-functions babel-cli
+
+# check if everything is ok (babel will transform es2015 to es5)
+./node_modules/babel-cli/bin/babel.js src/main.js
+
+# install babel-loader for Webpack4
+npm install babel-loader@7
+
+# install babel async plugin to transform async/await to Promise
+npm install babel-plugin-async-to-promises
+
+# install babel polyfill for better IE11 compatibility
+npm install babel-polyfill
 
 ```

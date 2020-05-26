@@ -4,7 +4,11 @@ module.exports = {
 
   entry: {
     // bundle (can ba an array for multiple input files):
-    main: ['./src/main.js']
+    main: [
+      // 'babel-polyfill', // too many polyfill gonna be bundled
+      // 'core-js/fn/promise', // only promise function is gonna included to the bundle
+      './src/main.js'
+    ]
   },
   mode:'development',
   output:{
@@ -22,6 +26,15 @@ module.exports = {
   module: {
     // modules need to be installed (it'll applied one by one bottom-up)
     rules: [
+      {
+        test: /\.js$/,
+        use: [
+          {
+            loader: 'babel-loader'
+          }
+        ],
+        exclude: /node_modules/
+      },
       // this needs: npm install style-loader css-loader
      {
        test: /\.css$/,
