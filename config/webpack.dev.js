@@ -43,7 +43,31 @@ module.exports = {
           },
           // this tells webpack to output resource in a separate file
           { loader: "extract-loader" },
-          { loader: "html-loader" },
+          { loader: "html-loader",
+            options: {
+              attributes: {
+                list: [
+                  {
+                    tag: "img",
+                    attribute: "src",
+                    type: "src"
+                  }
+                ]
+              }
+            }
+         },
+        ]
+     },
+     {
+       test: /\.(jpg|png)$/,
+       use: [
+          { loader: "file-loader",
+            options: {
+              name: "img/[name].[ext]"
+              // files can have hashes
+              // name: "img/[name]-[hash:8].[ext]"
+            }
+          }
         ]
      }
     ]

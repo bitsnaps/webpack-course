@@ -38,4 +38,7 @@ npm install style-loader css-loader
 
 # Html loader
 npm install html-loader extract-loader file-loader
+
+# Image loader
+
 ```
