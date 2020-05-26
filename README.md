@@ -68,4 +68,7 @@ npm install babel-plugin-async-to-promises
 # install babel polyfill for better IE11 compatibility
 npm install babel-polyfill
 
+# installing babel-preset is easy to setup
+npm install babel-preset-env
+npm install babel-plugin-transform-runtime
 ```

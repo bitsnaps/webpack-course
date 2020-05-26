@@ -93,7 +93,7 @@
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-eval("// Imports\nvar ___CSS_LOADER_API_IMPORT___ = __webpack_require__(/*! ../node_modules/css-loader/dist/runtime/api.js */ \"./node_modules/css-loader/dist/runtime/api.js\");\nexports = ___CSS_LOADER_API_IMPORT___(false);\n// Module\nexports.push([module.i, \"body {\\n  margin: 0;\\n  background-color: #444;\\n}\\n\\nh1 {\\n  height: 100vh;\\n  display: flex;\\n  color: white;\\n  align-items: center;\\n  justify-content: center;\\n  font-size: 5em;\\n  font-family: sans-serif;\\n  text-shadow: 0 0 20px black;\\n}\\n\", \"\"]);\n// Exports\nmodule.exports = exports;\n\n\n//# sourceURL=webpack:///./src/main.css?./node_modules/css-loader/dist/cjs.js");
+eval("// Imports\nvar ___CSS_LOADER_API_IMPORT___ = __webpack_require__(/*! ../node_modules/css-loader/dist/runtime/api.js */ \"./node_modules/css-loader/dist/runtime/api.js\");\nexports = ___CSS_LOADER_API_IMPORT___(false);\n// Module\nexports.push([module.i, \"body {\\n  margin: 0;\\n  background-color: #444;\\n}\\n\\n.profile {\\n  display: flex;\\n  align-items: center;\\n  justify-content: center;\\n  height: 100vh;\\n  flex-flow: column;\\n}\\n\\nimg {\\n  border-radius: 100%;\\n  width: 300px;\\n  box-shadow: 0 0 20px black;\\n}\\n\\nh1 {\\n  color: white;\\n  font-size: 5em;\\n  font-family: sans-serif;\\n  text-shadow: 0 0 20px black;\\n}\\n\", \"\"]);\n// Exports\nmodule.exports = exports;\n\n\n//# sourceURL=webpack:///./src/main.css?./node_modules/css-loader/dist/cjs.js");
 
 /***/ }),
 
@@ -151,7 +151,8 @@ eval("var api = __webpack_require__(/*! ../node_modules/style-loader/dist/runtim
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-eval("__webpack_require__(/*! ./main.css */ \"./src/main.css\");\n__webpack_require__(/*! ./index.html */ \"./src/index.html\");\n\n\n//# sourceURL=webpack:///./src/main.js?");
+"use strict";
+eval("\n\nfunction _asyncToGenerator(fn) { return function () { var gen = fn.apply(this, arguments); return new Promise(function (resolve, reject) { function step(key, arg) { try { var info = gen[key](arg); var value = info.value; } catch (error) { reject(error); return; } if (info.done) { resolve(value); } else { return Promise.resolve(value).then(function (value) { step(\"next\", value); }, function (err) { step(\"throw\", err); }); } } return step(\"next\"); }); }; }\n\n__webpack_require__(/*! ./main.css */ \"./src/main.css\");\n__webpack_require__(/*! ./index.html */ \"./src/index.html\");\n\nvar a = function () {\n  var _ref = _asyncToGenerator( /*#__PURE__*/regeneratorRuntime.mark(function _callee() {\n    return regeneratorRuntime.wrap(function _callee$(_context) {\n      while (1) {\n        switch (_context.prev = _context.next) {\n          case 0:\n            _context.next = 2;\n            return console.log('Hello from the future!');\n\n          case 2:\n            console.log('done.');\n\n          case 3:\n          case 'end':\n            return _context.stop();\n        }\n      }\n    }, _callee, undefined);\n  }));\n\n  return function a() {\n    return _ref.apply(this, arguments);\n  };\n}();\n\n//# sourceURL=webpack:///./src/main.js?");
 
 /***/ }),
 
