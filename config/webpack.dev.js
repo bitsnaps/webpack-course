@@ -61,6 +61,28 @@ module.exports = {
           { loader: "sass-loader" }
         ]
      },
+      /*/ this needs: npm install stylus stylus-loader
+     {
+       test: /\.styl/,
+       use: [
+         // this will inject style into the html
+          { loader: "style-loader" },
+          { loader: "css-loader" },
+          // you need to: npm install postcss postcss-loader
+          { loader: "postcss-loader" },
+          { loader: "stylus-loader" }
+        ]
+     },*/
+      // this needs: npm install less less-loader
+     {
+       test: /\.less$/,
+       use: [
+         // this will inject style into the html
+          { loader: "style-loader" },
+          { loader: "css-loader" },
+          { loader: "less-loader" }
+        ]
+     },
      // this needs: npm install html-loader extract-loader file-loader
      {
        test: /\.html$/,

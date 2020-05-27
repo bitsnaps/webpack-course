@@ -119,4 +119,14 @@ touch src/index.hbs
 ```
 npm install node-sass sass-loader
 touch src/main.sass
+
+# install less & less-loader
+npm install less less-loader
+npm install stylus stylus-loader
+touch src/main.less src/main.styl
+
+# install postcss to process browser vendor specific css prefix
+npm install postcss postcss-loader
+touch postcss.config.js
+
 ```
