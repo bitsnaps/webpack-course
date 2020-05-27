@@ -1,4 +1,6 @@
 const path = require('path');
+const webpack = require('webpack')
+
 
 module.exports = {
 
@@ -21,7 +23,9 @@ module.exports = {
   devServer: {
     contentBase: path.resolve(__dirname, '../dist'),
     // display errors on the browser as well
-    overlay: true
+    overlay: true,
+    hot: true,
+    stats: { colors: true }
   },
   module: {
     // modules need to be installed (it'll applied one by one bottom-up)
@@ -84,6 +88,9 @@ module.exports = {
         ]
      }
     ]
-  }
+  },
+  plugins: [
+    new webpack.HotModuleReplacementPlugin()
+  ]
 
 }

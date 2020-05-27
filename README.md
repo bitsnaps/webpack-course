@@ -72,3 +72,16 @@ npm install babel-polyfill
 npm install babel-preset-env
 npm install babel-plugin-transform-runtime
 ```
+
+## Adding express.js
+```
+npm install express
+mkdir src/server
+touch src/server/main.js src/server/express.js
+
+# webpack-dev middleware will glue webpack to express
+npm install webpack-dev-middleware
+
+# webpack-hot-middleware allows hot reloading
+npm install webpack-hot-middleware
+```
