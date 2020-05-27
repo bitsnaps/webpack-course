@@ -95,3 +95,9 @@ npm install -g nodemon
 ```
 npm install html-webpack-plugin
 ```
+
+## debugging
+```
+# adding "debugger" at any line into your source (server or client)
+# will allows you to pause chrome for debugging
+```

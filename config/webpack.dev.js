@@ -28,6 +28,7 @@ module.exports = {
     hot: true,
     stats: { colors: true }
   },
+  devtool: 'source-map',
   module: {
     // modules need to be installed (it'll applied one by one bottom-up)
     rules: [
