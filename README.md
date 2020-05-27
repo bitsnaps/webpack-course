@@ -107,4 +107,6 @@ npm install html-webpack-plugin
 npm install react react-dom
 # for .babelrc config to recognize html elements in js files
 npm install babel-preset-react
+# hot loader
+react-hot-loader@next
 ```
