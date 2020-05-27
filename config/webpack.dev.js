@@ -84,19 +84,43 @@ module.exports = {
        use: [
           { loader: "file-loader",
             options: {
-              name: "img/[name].[ext]"
+              name: "img/[name].[ext]",
+              esModule: false
               // files can have hashes
               // name: "img/[name]-[hash:8].[ext]"
             }
           }
         ]
-     }
+     },
+     {
+       test: /\.pug$/,
+       use: [
+          { loader: 'pug-loader' }
+        ]
+     },/*
+     {
+       test: /\.hbs/,
+       use: [
+         // need to: npm install handlebars handlebars-loader
+          {
+          loader: 'handlebars-loader',
+          query: {
+            inlineRequires: "/img/"
+          }
+        }
+        ]
+     }*/
     ]
   },
   plugins: [
     new webpack.HotModuleReplacementPlugin(),
     new HtmlWebpackPlugin({
-      template: './src/index.html'
+      template: './src/index.ejs',
+      // template: './src/index.pug',
+      // template: './src/index.hbs',
+      title: 'Hello Webpack4',
+
+      // you can include as much options as you want to use them in the template
     })
   ]
 

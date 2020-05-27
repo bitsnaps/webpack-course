@@ -101,3 +101,16 @@ npm install html-webpack-plugin
 # adding "debugger" at any line into your source (server or client)
 # will allows you to pause chrome for debugging
 ```
+
+## HTML Preprocessor hookup (ejs, pug...)
+```
+# if you're using ejs
+touch src/index.ejs
+
+# if you're using pug
+touch src/index.pug
+
+# if you're using handlebars
+npm install handlebars handlebars-loader
+touch src/index.hbs
+```
