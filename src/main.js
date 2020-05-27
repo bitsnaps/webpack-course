@@ -1,7 +1,9 @@
 require('babel-runtime/regenerator')
+require('babel-register')
 require('webpack-hot-middleware/client?reload=true')
 require('./main.css')
 require('./index.html')
+require('./app')
 
 var a = async (args) => {
   var {a, b} = args

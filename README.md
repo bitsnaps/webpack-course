@@ -101,3 +101,10 @@ npm install html-webpack-plugin
 # adding "debugger" at any line into your source (server or client)
 # will allows you to pause chrome for debugging
 ```
+
+## Install react
+```
+npm install react react-dom
+# for .babelrc config to recognize html elements in js files
+npm install babel-preset-react
+```
