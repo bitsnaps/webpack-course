@@ -51,6 +51,16 @@ module.exports = {
 
         ]
      },
+      // this needs: npm install node-sass sass-loader
+     {
+       test: /\.sass$/,
+       use: [
+         // this will inject style into the html
+          { loader: "style-loader" },
+          { loader: "css-loader" },
+          { loader: "sass-loader" }
+        ]
+     },
      // this needs: npm install html-loader extract-loader file-loader
      {
        test: /\.html$/,

@@ -114,3 +114,9 @@ touch src/index.pug
 npm install handlebars handlebars-loader
 touch src/index.hbs
 ```
+
+## CSS Preprocessor (sass, less, stylus)
+```
+npm install node-sass sass-loader
+touch src/main.sass
+```
