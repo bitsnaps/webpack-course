@@ -90,3 +90,8 @@ npm install webpack-hot-middleware
 ```
 npm install -g nodemon
 ```
+
+## Enable html hot reloading from the server side
+```
+npm install html-webpack-plugin
+```

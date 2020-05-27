@@ -1,5 +1,6 @@
 const path = require('path');
 const webpack = require('webpack')
+const HtmlWebpackPlugin = require('html-webpack-plugin')
 
 
 module.exports = {
@@ -53,13 +54,15 @@ module.exports = {
      {
        test: /\.html$/,
        use: [
+         /*
+         // these two loaders are replaced by HtmlWebpackPlugin
          { loader: "file-loader",
             options: {
               name: "[name].html"
             }
           },
           // this tells webpack to output resource in a separate file
-          { loader: "extract-loader" },
+          { loader: "extract-loader" },*/
           { loader: "html-loader",
             options: {
               attributes: {
@@ -90,7 +93,10 @@ module.exports = {
     ]
   },
   plugins: [
-    new webpack.HotModuleReplacementPlugin()
+    new webpack.HotModuleReplacementPlugin(),
+    new HtmlWebpackPlugin({
+      template: './src/index.html'
+    })
   ]
 
 }
