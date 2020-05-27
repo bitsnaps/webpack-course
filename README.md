@@ -85,3 +85,8 @@ npm install webpack-dev-middleware
 # webpack-hot-middleware allows hot reloading
 npm install webpack-hot-middleware
 ```
+
+## Adding nodemon
+```
+npm install -g nodemon
+```
