@@ -105,5 +105,9 @@ npm install html-webpack-plugin
 ## hookup vue.js
 ```
 npm install vue vue-loader
+
+# style loader for hot reloading
+npm install vue-template-compiler vue-style-loader
+
 touch src/app.js src/App.vue
 ```

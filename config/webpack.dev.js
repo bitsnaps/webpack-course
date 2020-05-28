@@ -29,6 +29,12 @@ module.exports = {
     stats: { colors: true }
   },
   devtool: 'source-map',
+  resolve: {
+    alias: {
+      // tell webpack to use compile-time build
+      vue$: 'vue/dist/vue.esm.js'
+    }
+  },
   module: {
     // modules need to be installed (it'll applied one by one bottom-up)
     rules: [

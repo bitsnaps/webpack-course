@@ -1,9 +1,10 @@
 import Vue from 'vue'
 import App from './App.vue'
+import Profile from './components/profile'
 
 
 new Vue({
   el: '#app',
-  render: h => h
-
+  components: { Profile },
+  render: h => h(App)
 })
