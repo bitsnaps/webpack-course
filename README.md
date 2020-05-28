@@ -101,3 +101,9 @@ npm install html-webpack-plugin
 # adding "debugger" at any line into your source (server or client)
 # will allows you to pause chrome for debugging
 ```
+
+## hookup vue.js
+```
+npm install vue vue-loader
+touch src/app.js src/App.vue
+```

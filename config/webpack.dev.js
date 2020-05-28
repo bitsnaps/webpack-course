@@ -1,7 +1,7 @@
 const path = require('path');
 const webpack = require('webpack')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
-
+const {VueLoaderPlugin} = require('vue-loader')
 
 module.exports = {
 
@@ -32,6 +32,14 @@ module.exports = {
   module: {
     // modules need to be installed (it'll applied one by one bottom-up)
     rules: [
+      {
+        test: /\.vue$/,
+        use: [
+          {
+            loader: 'vue-loader'
+          }
+        ]
+      },
       {
         test: /\.js$/,
         use: [
@@ -94,6 +102,7 @@ module.exports = {
     ]
   },
   plugins: [
+    new VueLoaderPlugin(),
     new webpack.HotModuleReplacementPlugin(),
     new HtmlWebpackPlugin({
       template: './src/index.html'
