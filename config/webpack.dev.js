@@ -10,7 +10,8 @@ module.exports = {
     main: [
       // 'babel-polyfill', // too many polyfill gonna be bundled
       // 'core-js/fn/promise', // only promise function is gonna included to the bundle
-      './src/main.js'
+      './src/main.js',
+      './src/index.ts'
     ]
   },
   mode:'development',
@@ -37,6 +38,15 @@ module.exports = {
         use: [
           {
             loader: 'babel-loader'
+          }
+        ],
+        exclude: /node_modules/
+      },
+      {
+        test: /\.ts$/,
+        use: [
+          {
+            loader: 'awesome-typescript-loader'
           }
         ],
         exclude: /node_modules/

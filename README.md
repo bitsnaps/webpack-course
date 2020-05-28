@@ -101,3 +101,10 @@ npm install html-webpack-plugin
 # adding "debugger" at any line into your source (server or client)
 # will allows you to pause chrome for debugging
 ```
+
+## hookup typescript
+```
+npm install typescript awesome-typescript-loader
+touch src/index.ts
+touch tsconfig.json
+```
