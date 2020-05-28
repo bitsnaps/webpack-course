@@ -4,9 +4,10 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "webpack-dev-server --config=config/webpack.dev.js",
-    "build": "rm -rf dist/* && webpack --config=config/webpack.dev.js",
-    "dev": "nodemon --inspect --watch config --watch src/server src/server/main.js"
+    "start": "webpack-dev-server --config=config/webpack.prod.js",
+    "build": "rm -rf dist/* && NODE_ENV=production webpack --config=config/webpack.prod.js",
+    "dev": "nodemon --watch config --watch src/server src/server/main.js",
+    "dev-debug": "nodemon --inspect --watch config --watch src/server src/server/main.js"
   },
   "keywords": [],
   "author": "",
